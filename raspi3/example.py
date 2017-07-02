@@ -41,7 +41,8 @@ while True:
     print "Recv from : %s RSSI:%s" % (test.SENDERID, test.RSSI)
     array=("".join([chr(letter) for letter in test.DATA]))
     print "array :: %s" % (array)
-    print "data 1 : %s data 2 : %s temp : %s vBatt %s" % (array[:19],array[19:23],array[23:27],array[27:33] )
+    print "data 1 : %s Pressure : %s humidity : %s temp1 : %s temp2 : %s vBatt %s" \
+	% (array[:19],array[19:27],array[27:33],array[33:39],array[39:43],array[43:49])
 
 #    a=""
 #    for c in array[19:27]:
@@ -56,3 +57,4 @@ while True:
 
 print "shutting down"
 test.shutdown()
+
